@@ -6,4 +6,7 @@ nav:
   - SOFTware-Check : check.md
   - SOFTware-Hub : hub.md
   - About: about.md
-theme: readthedocs
+theme:
+  name: readthedocs
+  locale: fr
+  logo: /img/SOFTWARE_all.png
