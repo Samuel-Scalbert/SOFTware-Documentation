@@ -1,0 +1,9 @@
+site_name: SOFTware
+nav:
+  - Home: index.md
+  - SOFTware-Sync : sync.md
+  - SOFTware-Viz : viz.md
+  - SOFTware-Check : check.md
+  - SOFTware-Hub : hub.md
+  - About: about.md
+theme: readthedocs
