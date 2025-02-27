@@ -1,4 +1,4 @@
-site_name: SOFTware
+site_name: SOFTware-Documentation
 nav:
   - Home: index.md
   - SOFTware-Sync : sync.md
