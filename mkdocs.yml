@@ -3,8 +3,9 @@ nav:
   - Home: index.md
   - SOFTware-Sync : sync.md
   - SOFTware-Viz : viz.md
-  - SOFTware-Check : check.md
+  - SOFTware-Viz-Light : viz_light.md
   - SOFTware-Hub : hub.md
+  - SOFTware-Check : check.md
   - About: about.md
 theme:
   name: readthedocs
