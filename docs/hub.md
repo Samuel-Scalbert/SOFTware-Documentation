@@ -13,34 +13,32 @@
 
 ## Présentation du projet
 
-**SOFTware-HUB** ne fonctionne que sur LINUX.
+**SOFTware-HUB** ne fonctionne que sur **Linux**.  
 
-L'objectif est de permettre de lancer le pipeline SOFTware automatiquement.
+L'objectif est de permettre de lancer le pipeline **SOFTware** automatiquement.  
 
-<img src="../img/pipeline.png" alt="closed-issues">
+Le projet comprend **trois** scripts **Bash** et **un** script **Python**.  
 
-Le projet comprend 3 scripts bash et 1 script python.
+**SOFTware-HUB** s'occupe de lancer les **trois** conteneurs **Docker** nécessaires au bon fonctionnement du pipeline (et de supprimer les conteneurs en trop).  
 
-**SOFTware-Hube** s'occupe de lancer les trois docker nécessaire au bon fonctionnement du pipeline (et de supprimer les containers en trop).
+## Prérequis  
 
-## Prérequis
+Installer les dépendances du **Hub** :  
 
-Installer les dépendances du Hub:
-
-```code
+```console
 pip install -r requirements.txt
 ```
 
-Concernant les prérequis il faudra manuellement installer les 4 applications suivante:
+Concernant les prérequis, il faudra installer **manuellement** les **quatre** applications suivantes :  
 
 * [SOFTware-Viz](https://github.com/Samuel-Scalbert/SOFTware-Viz) ou la version Light: [SOFTware-Viz-Light](https://github.com/Samuel-Scalbert/SOFTware-Viz-Light)
 * [SOFTware-Sync](https://github.com/Samuel-Scalbert/SOFTware-Sync) 
 * [Grobid CLIENT](https://github.com/kermitt2/grobid_client_python)
 * [Softcite CLIENT](https://github.com/softcite/software_mentions_client)
 
-Il est fortement conseillé de les installer dans le même dossier au même niveau que cette application de cette manière:
+Il est fortement conseillé de les installer dans le même dossier, au même niveau que cette application, de cette manière :  
 
-```aiignore
+```plaintext
 ├── SOFTware
 │   ├── grobid_client_python
 │   ├── SOFTware-Hub
@@ -49,27 +47,27 @@ Il est fortement conseillé de les installer dans le même dossier au même nive
 │   └── SOFTware-Viz
 ```
 
-Si vous souhaitez changer les positions des applications il est possible de modifier le fichier config.json (il est aussi possible de changer la version des images Docker si vous en avez besoin):
+Si vous souhaitez modifier l'emplacement des applications, il est possible d'éditer le fichier **config.json** (il est aussi possible de changer la version des images Docker si nécessaire) :  
 
-```aiignore
+```plaintext
 ├── SOFTware-Hub
 │   ├── ...
 │   └── config.json
 ```
 
-## Lancement de l'application
+## Lancement de l'application  
 
-### DATA CREATOR
+### DATA CREATOR  
 
-le premier script a lancer va seulement créer un dossier ../data avec tous les sous dossiers nécessaire.
+Le premier script à lancer va uniquement créer un dossier `../data` avec tous les sous-dossiers nécessaires.  
 
 ```console
 ./DATA_CREATOR.sh
 ```
 
-Il faut ensuite insérer vos PDF dans le dossier :
+Il faut ensuite insérer vos **PDF** dans le dossier suivant :  
 
-```aiignore
+```plaintext
 ├── data
 │   ├── json_files
 │   ├── pdf_files (<---- ici)
@@ -78,15 +76,15 @@ Il faut ensuite insérer vos PDF dans le dossier :
 │   └── xml_meta
 ```
 
-### DATA PROCESSOR
+### DATA PROCESSOR  
 
-Pour ensuite process toute cette données il faut d'abord lancer le script qui s'occupe de check les dockers et les environment virtuel/installation des github:
+Pour traiter toutes ces données, il faut d'abord exécuter le script qui vérifie les **Docker**, les environnements virtuels et l'installation des dépendances depuis GitHub :  
 
 ```console
 python main.py
 ```
 
-le résultat :
+Résultat attendu :  
 
 ```console
 (venv) sscalber@ss-inria:~/Bureau/SOFTware/SOFTware-Hub$ python main.py
@@ -127,13 +125,13 @@ Checking application: SOFTware-Viz
     venv folder found
 ```
 
-Enfin il faut lancer le script pour process les pdf:
+Enfin, il faut lancer le script pour **traiter** les fichiers **PDF** :  
 
 ```console
 ./DATA_PROCESSOR.sh
 ```
 
-le résultat:
+Résultat attendu :  
 
 ```console
 (venv) sscalber@ss-inria:~/Bureau/SOFTware/SOFTware-Hub$ ./DATA_PROCESSOR.sh
@@ -159,5 +157,7 @@ Are you satisfied with the Software Mentions Client result? (y/n): y
 Proceeding to the end of the pipeline.
 ```
 
-### DATA VISUALIZER (incoming)
-### DATA VISUALIZER LIGHT (incoming)
+### DATA VISUALIZER *(à venir)*  
+### DATA VISUALIZER LIGHT *(à venir)*  
+
+---
