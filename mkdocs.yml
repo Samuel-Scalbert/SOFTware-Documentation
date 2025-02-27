@@ -1,10 +1,10 @@
 site_name: SOFTware-Documentation
 nav:
   - Home: index.md
+  - SOFTware-Hub : hub.md
   - SOFTware-Sync : sync.md
   - SOFTware-Viz : viz.md
   - SOFTware-Viz-Light : viz_light.md
-  - SOFTware-Hub : hub.md
   - SOFTware-Check : check.md
   - About: about.md
 theme:
