@@ -64,10 +64,6 @@ docker pull arangodb/arangodb:3.11.6
 ```console
 docker run -p 8529:8529 -e ARANGO_NO_AUTH=1 arangodb/arangodb:3.11.6
 ```
-* Créez la base de données **SOF-viz** :
-```console
-Allez sur http://localhost:8529/ et créez manuellement la base de données nommée **SOF-viz**
-```
 * Activez l’environnement virtuel :<br>
 ```console
 source env/bin/activate
@@ -76,6 +72,8 @@ source env/bin/activate
 ```console
 pip install -r requirement.txt
 ```
+* Insérez les fichiers XML dans le dossier ./app/static/data/xml_files et les json dans app/static/data/json_files :<br>
+<br>
 * Lancez l’application :    
 ```console
 python run.py
