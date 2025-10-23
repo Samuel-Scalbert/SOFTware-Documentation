@@ -2,7 +2,7 @@
   <img src="../img/SOFTware-Viz.png" alt="SOFTware-Viz" width="160" style="margin: 6px;"/>
 </div>
 
-<div style="text-align: center;margin-bottom: 20px;">
+<div style="text-align: center; margin-bottom: 20px;">
 	<img src="https://img.shields.io/github/last-commit/Samuel-Scalbert/SOFTware-Viz?style=default&logo=git&logoColor=white&color=44a7e4" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Samuel-Scalbert/SOFTware-Viz?style=default&color=6598ef" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/Samuel-Scalbert/SOFTware-Viz?style=default&color=9283ec" alt="repo-language-count">
@@ -13,7 +13,7 @@
 
 ## Présentation du projet
 
-🛑 Cette application est actuellement conçue pour interagir avec **HAL** et récolter des métadonnées liées à la base de données.
+🛑 Cette application est conçue pour interagir avec **HAL** et récolter des métadonnées liées à la base de données.
 
 🛑 Une version plus légère de l’application est en cours de développement, permettant à chacun de créer sa propre application sans nécessiter de connexion à **HAL**.
 
@@ -66,9 +66,21 @@ docker pull arangodb/arangodb:3.11.6
 ```console
 docker run -p 8529:8529 -e ARANGO_NO_AUTH=1 arangodb/arangodb:3.11.6
 ```
-* Créez la base de données **SOF-viz** :
+* Installez l’image **Elasticsearch** :<br>
 ```console
-Allez sur http://localhost:8529/ et créez manuellement la base de données nommée **SOF-viz**
+docker pull docker.elastic.co/elasticsearch/elasticsearch:9.0.2
+```
+* Lancez un conteneur **Docker** :<br>
+```console
+sudo docker run -d \
+  --name elasticsearch \
+  -p 9200:9200 \
+  -p 9300:9300 \
+  -e "discovery.type=single-node" \
+  -e "ES_JAVA_OPTS=-Xms1g -Xmx1g" \
+  -e "xpack.security.enabled=false" \
+  --memory="2g" \
+  docker.elastic.co/elasticsearch/elasticsearch:9.0.2
 ```
 * Activez l’environnement virtuel :<br>
 ```console
