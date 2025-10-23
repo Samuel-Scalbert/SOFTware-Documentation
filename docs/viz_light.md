@@ -73,7 +73,9 @@ source env/bin/activate
 pip install -r requirement.txt
 ```
 * Insérez les fichiers XML dans le dossier ./app/static/data/xml_files et les json dans app/static/data/json_files :<br>
-<br>
+
+🛑Il y a déjà des fichiers de test dans les dossiers (vous pouvez les supprimer pour essayer l'application pour votre corpus)
+
 * Lancez l’application :    
 ```console
 python run.py
