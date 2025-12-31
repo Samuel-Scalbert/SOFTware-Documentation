@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>SOFTware-Viz-Light - SOFTware-Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SOFTware-Viz-Light";
+        var mkdocs_page_input_path = "viz_light.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="/img/SOFTWARE_all.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Rechercher des documents" aria-label="Rechercher des documents" title="Tapez vos mots clés ici" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navigation">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../hub/">SOFTware-Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sync/">SOFTware-Sync</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../viz/">SOFTware-Viz</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">SOFTware-Viz-Light</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#base-de-donnees-de-pdf">Base de données de PDF</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#grobid">GROBID</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#softcite">SOFTCITE</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-sync">SOFTware-Sync</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-viz">SOFTware-Viz</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arangodb">ArangoDB</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#flask">Flask</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../check/">SOFTware-Check</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Menu de navigation sur mobile">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SOFTware-Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Documents"></a></li>
+      <li class="breadcrumb-item active">SOFTware-Viz-Light</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div style="text-align: center;margin-bottom: 20px;">
+  <img src="../img/SOFTware-Viz.png" alt="SOFTware-Viz" width="160" style="margin: 6px;"/>
+</div>
+
+<div style="text-align: center;margin-bottom: 20px;">
+    <img src="https://img.shields.io/github/last-commit/Samuel-Scalbert/SOFTware-Viz?style=default&logo=git&logoColor=white&color=44a7e4" alt="last-commit">
+    <img src="https://img.shields.io/github/languages/top/Samuel-Scalbert/SOFTware-Viz?style=default&color=6598ef" alt="repo-top-language">
+    <img src="https://img.shields.io/github/languages/count/Samuel-Scalbert/SOFTware-Viz?style=default&color=9283ec" alt="repo-language-count">
+    <img src="https://badgen.net/github/commits/Samuel-Scalbert/SOFTware-Viz/main?style=default&color=bd67d6" alt="repo-commits-count">
+    <img src="https://img.shields.io/github/issues/Samuel-Scalbert/SOFTware-Viz?style=default&color=de42af" alt="open-issues">
+    <img src="https://img.shields.io/github/issues-closed/Samuel-Scalbert/SOFTware-Viz?style=default&color=ee0979" alt="closed-issues">
+</div>
+
+<h2 id="presentation-du-projet">Présentation du projet</h2>
+<p>🛑 Cette version de SOFTware-Viz est la version universelle qui fonctionne avec tous les fichiers PDF et sans connexion à HAL INRIA.</p>
+<p>🛑 Si vous utilisez des fichiers de HAL, vous devez utiliser la version originale <a href="https://github.com/Samuel-Scalbert/SOFTware-Viz">SOFTware-Viz</a>.</p>
+<h3 id="base-de-donnees-de-pdf">Base de données de PDF</h3>
+<p>Le processus commence avec une base de données de fichiers <strong>PDF</strong> académiques qui doivent être extraits et traités.</p>
+<h3 id="grobid">GROBID</h3>
+<p>Les fichiers <strong>PDF</strong> sont envoyés à <strong>GROBID</strong>, un outil permettant d’extraire des données structurées (comme des informations bibliographiques) à partir de <strong>PDF</strong> académiques. <strong>GROBID</strong> génère en sortie des fichiers <strong>XML</strong>, rendant l’information lisible par machine.</p>
+<h3 id="softcite">SOFTCITE</h3>
+<p>Après <strong>GROBID</strong>, les données extraites sont transmises à <strong>SOFTCITE</strong>, qui génère des fichiers <strong>JSON</strong>. <strong>SOFTCITE</strong> analyse les citations, les mentions de logiciels ou d’autres informations de référence présentes dans les <strong>PDF</strong>.</p>
+<h3 id="software-sync">SOFTware-Sync</h3>
+<p>Les fichiers <strong>XML</strong> et <strong>JSON</strong> extraits sont ensuite traités par <strong>SOFTware-Sync</strong>, un outil qui synchronise ces données dans un fichier <strong>XML</strong> unique.</p>
+<h3 id="software-viz">SOFTware-Viz</h3>
+<p><strong>SOFTware-Viz</strong> est chargé de la visualisation des données traitées. Il prend les données synchronisées par <strong>SOFTware-Sync</strong> et les transforme en <strong>tableaux de bord</strong> ou autres représentations graphiques.</p>
+<h3 id="arangodb">ArangoDB</h3>
+<p>Les données traitées sont stockées dans <strong>ArangoDB</strong>, une base de données <strong>NoSQL multi-modèle</strong>, permettant la gestion des données structurées. Elle sert de stockage principal pour les informations et mentions extraites.</p>
+<h3 id="flask">Flask</h3>
+<p><strong>Flask</strong> est un framework web utilisé pour développer des applications web. Il interagit avec <strong>SOFTware-Viz</strong> (pour la visualisation) et <strong>ArangoDB</strong> (pour la récupération des données).</p>
+<hr />
+<h2 id="installation">Installation</h2>
+<h4 id="depuis-la-source">Depuis <code>la source</code></h4>
+<ul>
+<li>Clonez le dépôt :<br></li>
+</ul>
+<pre><code class="language-console">git clone ../
+</code></pre>
+<ul>
+<li>Accédez au répertoire du projet :<br></li>
+</ul>
+<pre><code class="language-console">cd ./SOFTware-viz
+</code></pre>
+<ul>
+<li>Créez un environnement virtuel :<br></li>
+</ul>
+<pre><code class="language-console">python -m venv env
+</code></pre>
+<ul>
+<li>Installez l’image <strong>Docker</strong> :<br></li>
+</ul>
+<pre><code class="language-console">docker pull arangodb/arangodb:3.11.6
+</code></pre>
+<ul>
+<li>Lancez un conteneur <strong>Docker</strong> :<br></li>
+</ul>
+<pre><code class="language-console">docker run -p 8529:8529 -e ARANGO_NO_AUTH=1 arangodb/arangodb:3.11.6
+</code></pre>
+<ul>
+<li>Activez l’environnement virtuel :<br></li>
+</ul>
+<pre><code class="language-console">source env/bin/activate
+</code></pre>
+<ul>
+<li>Installez les dépendances :<br></li>
+</ul>
+<pre><code class="language-console">pip install -r requirement.txt
+</code></pre>
+<ul>
+<li>Insérez les fichiers XML dans le dossier ./app/static/data/xml_files et les json dans app/static/data/json_files :<br></li>
+</ul>
+<p>🛑Il y a déjà des fichiers de test dans les dossiers (vous pouvez les supprimer pour essayer l'application pour votre corpus)</p>
+<ul>
+<li>Lancez l’application :    </li>
+</ul>
+<pre><code class="language-console">python run.py
+</code></pre>
+<hr />
+<h2 id="utilisation">Utilisation</h2>
+<h4 id="depuis-la-source_1">Depuis <code>la source</code></h4>
+<p>Exécutez l’application avec la commande suivante (<strong>la base de données se créera automatiquement lors du premier lancement</strong>) :</p>
+<pre><code>python run.py
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Navigation de pied de page">
+        <a href="../viz/" class="btn btn-neutral float-left" title="SOFTware-Viz"><span class="icon icon-circle-arrow-left"></span> Précédent</a>
+        <a href="../check/" class="btn btn-neutral float-right" title="SOFTware-Check">Suivant <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Générée avec <a href="https://www.mkdocs.org/">MkDocs</a> avec un <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a> fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../viz/" style="color: #fcfcfc">&laquo; Précédent</a></span>
+    
+    
+      <span><a href="../check/" style="color: #fcfcfc">Suivant &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

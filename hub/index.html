@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>SOFTware-Hub - SOFTware-Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SOFTware-Hub";
+        var mkdocs_page_input_path = "hub.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="/img/SOFTWARE_all.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Rechercher des documents" aria-label="Rechercher des documents" title="Tapez vos mots clés ici" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navigation">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">SOFTware-Hub</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sync/">SOFTware-Sync</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../viz/">SOFTware-Viz</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../viz_light/">SOFTware-Viz-Light</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../check/">SOFTware-Check</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Menu de navigation sur mobile">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SOFTware-Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Documents"></a></li>
+      <li class="breadcrumb-item active">SOFTware-Hub</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div style="text-align: center;margin-bottom: 20px;">
+  <img src="../img/SOFTware-Hub.png" alt="SOFTware-Hub" width="160" style="margin: 6px;"/>
+</div>
+
+<div style="text-align: center;margin-bottom: 20px;">
+    <img src="https://img.shields.io/github/last-commit/Samuel-Scalbert/SOFTware-Hub?style=default&logo=git&logoColor=white&color=61efff" alt="last-commit">
+    <img src="https://img.shields.io/github/languages/top/Samuel-Scalbert/SOFTware-Hub?style=default&color=27f4f5" alt="repo-top-language">
+    <img src="https://img.shields.io/github/languages/count/Samuel-Scalbert/SOFTware-Hub?style=default&color=00f9e4" alt="repo-language-count">
+    <img src="https://badgen.net/github/commits/Samuel-Scalbert/SOFTware-Hub/main?style=default&color=00fccb" alt="repo-commits-count">
+    <img src="https://img.shields.io/github/issues/Samuel-Scalbert/SOFTware-Hub?style=default&color=00feac" alt="open-issues">
+    <img src="https://img.shields.io/github/issues-closed/Samuel-Scalbert/SOFTware-Hub?style=default&color=00ff88" alt="closed-issues">
+</div>
+
+<h2 id="presentation-du-projet">Présentation du projet</h2>
+<p><strong>SOFTware-HUB</strong> ne fonctionne que sur <strong>Linux</strong>.  </p>
+<p>L'objectif est de permettre de lancer le pipeline <strong>SOFTware</strong> automatiquement.  </p>
+<p>Le projet comprend <strong>trois</strong> scripts <strong>Bash</strong> et <strong>un</strong> script <strong>Python</strong>.  </p>
+<p><strong>SOFTware-HUB</strong> s'occupe de lancer les <strong>trois</strong> conteneurs <strong>Docker</strong> nécessaires au bon fonctionnement du pipeline (et de supprimer les conteneurs en trop).  </p>
+<h2 id="prerequis">Prérequis</h2>
+<p>Installer les dépendances du <strong>Hub</strong> :  </p>
+<pre><code class="language-console">git clone https://github.com/Samuel-Scalbert/SOFTware-Hub.git
+cd SOFTware-Hub/
+python3 -m venv venv
+pip install -r requirements.txt
+</code></pre>
+<p>Concernant les prérequis, il faudra installer <strong>manuellement</strong> les <strong>quatre</strong> applications suivantes :  </p>
+<ul>
+<li><a href="https://github.com/Samuel-Scalbert/SOFTware-Viz">SOFTware-Viz</a> ou la version Light: <a href="https://github.com/Samuel-Scalbert/SOFTware-Viz-Light">SOFTware-Viz-Light</a></li>
+<li><a href="https://github.com/Samuel-Scalbert/SOFTware-Sync">SOFTware-Sync</a> </li>
+<li><a href="https://github.com/kermitt2/grobid_client_python">Grobid CLIENT</a></li>
+<li><a href="https://github.com/softcite/software_mentions_client">Softcite CLIENT</a></li>
+</ul>
+<pre><code class="language-console">git clone https://github.com/Samuel-Scalbert/SOFTware-Viz-Light.git
+git clone https://github.com/Samuel-Scalbert/SOFTware-Sync.git 
+git clone https://github.com/kermitt2/grobid-client-python.git
+git clone https://github.com/softcite/software_mentions_client.git
+</code></pre>
+<p>Il est fortement conseillé de les installer dans le même dossier, au même niveau que cette application, de cette manière :  </p>
+<pre><code class="language-plaintext">├── SOFTware
+│   ├── grobid_client_python
+│   ├── SOFTware-Hub
+│   ├── software_mentions_client
+│   ├── SOFTware-Sync 
+│   └── SOFTware-Viz
+</code></pre>
+<p>Si vous souhaitez modifier l'emplacement des applications, il est possible d'éditer le fichier <strong>config.json</strong> (il est aussi possible de changer la version des images Docker si nécessaire) :  </p>
+<pre><code class="language-plaintext">├── SOFTware-Hub
+│   ├── ...
+│   └── config.json
+</code></pre>
+<h2 id="lancement-de-lapplication">Lancement de l'application</h2>
+<h3 id="data-creator">DATA CREATOR</h3>
+<p>Le premier script à lancer va uniquement créer un dossier <code>../data</code> avec tous les sous-dossiers nécessaires.  </p>
+<pre><code class="language-console">cd SOFTware-Hub/
+./DATA_CREATOR.sh
+</code></pre>
+<p>Il faut ensuite insérer vos <strong>PDF</strong> dans le dossier suivant :  </p>
+<pre><code class="language-plaintext">├── data
+│   ├── json_files
+│   ├── pdf_files (&lt;---- ici)
+│   ├── xml_files
+│   ├── xml_grobid
+│   └── xml_meta
+</code></pre>
+<h3 id="data-processor">DATA PROCESSOR</h3>
+<p>Pour traiter toutes ces données, il faut d'abord exécuter le script qui vérifie les <strong>Docker</strong>, les environnements virtuels et l'installation des dépendances depuis GitHub :  </p>
+<pre><code class="language-console">cd SOFTware-Hub/
+python main.py
+</code></pre>
+<p>Résultat attendu :  </p>
+<pre><code class="language-console">(venv) sscalber@ss-inria:~/Bureau/SOFTware/SOFTware-Hub$ python main.py
+Application check completed.
+
+    ┏┓┏┓┏┓┏┳┓           ┓┏  ┓ 
+    ┗┓┃┃┣  ┃ ┓┏┏┏┓┏┓┏┓━━┣┫┓┏┣┓
+    ┗┛┗┛┻  ┻ ┗┻┛┗┻┛ ┗   ┛┗┗┻┗┛                      
+
+Checking (image): grobid/grobid:0.8.0
+    grobid/grobid:0.8.0                                available
+Checking (image): grobid/software-mentions:0.8.0
+    grobid/software-mentions:0.8.0                     available
+nvidia-smi not found. No NVIDIA GPU is available or the NVIDIA drivers are not installed.
+Kept container: 'priceless_wu' running with image grobid/grobid:0.8.0 on port :{'8070/tcp': [{'HostIp': '0.0.0.0', 'HostPort': '8070'}, {'HostIp': '::', 'HostPort': '8070'}]}
+Kept container: 'dazzling_morse' running with image grobid/software-mentions:0.8.0 on port :{'8060/tcp': [{'HostIp': '0.0.0.0', 'HostPort': '8060'}, {'HostIp': '::', 'HostPort': '8060'}]}
+---------------------------------------------
+Checking application: Grobid_client
+  Verifying repository path: ../grobid_client_python
+    Repository path exists
+---------------------------------------------
+Checking application: Softcite_client
+  Verifying repository path: ../software_mentions_client
+    Repository path exists
+  Checking for virtual environment: ../software_mentions_client/venv
+    venv folder found
+---------------------------------------------
+Checking application: SOFTware-Sync
+  Verifying repository path: ../SOFTware-Sync
+    Repository path exists
+  Checking for virtual environment: ../SOFTware-Sync/venv
+    venv folder found
+---------------------------------------------
+Checking application: SOFTware-Viz
+  Verifying repository path: ../SOFTware-Sync
+    Repository path exists
+  Checking for virtual environment: ../SOFTware-Sync/venv
+    venv folder found
+</code></pre>
+<p>Enfin, il faut lancer le script pour <strong>traiter</strong> les fichiers <strong>PDF</strong> :  </p>
+<pre><code class="language-console">./DATA_PROCESSOR.sh
+</code></pre>
+<p>Résultat attendu :  </p>
+<pre><code class="language-console">(venv) sscalber@ss-inria:~/Bureau/SOFTware/SOFTware-Hub$ ./DATA_PROCESSOR.sh
+Installing Grobid Client...
+Running Grobid Client
+GROBID server is up and running
+runtime: 60.102 seconds 
+Are you satisfied with the Grobid result? (y/n): y
+Proceeding with the next step.
+Organizing XML files...
+Activating virtual environment for Software Mentions Client...
+Running Software Mentions Client...
+logs are written in client.log
+total process: 5 - accumulated runtime: 71.806 s - 0.07 files/s  
+---
+total entries: 7
+---
+total successfully processed: 7
+---
+total failed: 0
+---
+Are you satisfied with the Software Mentions Client result? (y/n): y
+Proceeding to the end of the pipeline.
+</code></pre>
+<h3 id="data-visualizer-a-venir">DATA VISUALIZER <em>(à venir)</em></h3>
+<h3 id="data-visualizer-light-a-venir">DATA VISUALIZER LIGHT <em>(à venir)</em></h3>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Navigation de pied de page">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Précédent</a>
+        <a href="../sync/" class="btn btn-neutral float-right" title="SOFTware-Sync">Suivant <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Générée avec <a href="https://www.mkdocs.org/">MkDocs</a> avec un <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a> fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Précédent</a></span>
+    
+    
+      <span><a href="../sync/" style="color: #fcfcfc">Suivant &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
