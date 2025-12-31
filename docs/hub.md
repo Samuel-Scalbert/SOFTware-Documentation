@@ -26,6 +26,9 @@ Le projet comprend **trois** scripts **Bash** et **un** script **Python**.
 Installer les dépendances du **Hub** :  
 
 ```console
+git clone https://github.com/Samuel-Scalbert/SOFTware-Hub.git
+cd SOFTware-Hub/
+python3 -m venv venv
 pip install -r requirements.txt
 ```
 
@@ -35,6 +38,13 @@ Concernant les prérequis, il faudra installer **manuellement** les **quatre** a
 * [SOFTware-Sync](https://github.com/Samuel-Scalbert/SOFTware-Sync) 
 * [Grobid CLIENT](https://github.com/kermitt2/grobid_client_python)
 * [Softcite CLIENT](https://github.com/softcite/software_mentions_client)
+
+```console
+git clone https://github.com/Samuel-Scalbert/SOFTware-Viz-Light.git
+git clone https://github.com/Samuel-Scalbert/SOFTware-Sync.git 
+git clone https://github.com/kermitt2/grobid-client-python.git
+git clone https://github.com/softcite/software_mentions_client.git
+```
 
 Il est fortement conseillé de les installer dans le même dossier, au même niveau que cette application, de cette manière :  
 
@@ -62,6 +72,7 @@ Si vous souhaitez modifier l'emplacement des applications, il est possible d'éd
 Le premier script à lancer va uniquement créer un dossier `../data` avec tous les sous-dossiers nécessaires.  
 
 ```console
+cd SOFTware-Hub/
 ./DATA_CREATOR.sh
 ```
 
@@ -81,6 +92,7 @@ Il faut ensuite insérer vos **PDF** dans le dossier suivant :
 Pour traiter toutes ces données, il faut d'abord exécuter le script qui vérifie les **Docker**, les environnements virtuels et l'installation des dépendances depuis GitHub :  
 
 ```console
+cd SOFTware-Hub/
 python main.py
 ```
 
